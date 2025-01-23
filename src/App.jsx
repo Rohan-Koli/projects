@@ -81,14 +81,17 @@ function App() {
         </motion.div>
 
         <div className="font-semibold mb-6">
+          <div className='flex justify-between items-center'>
           <motion.label
-            className="block text-md font-medium mb-2"
+            className="block text-md mt-4 font-medium mb-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
             Password Length: {length}
           </motion.label>
+          <button onClick={()=>passwordGenerator()} className=' text-orange-400 bg-gray-700 text-sm my-2 p-2 rounded-md'>Generate New Password</button>
+          </div>
           <motion.input
             type="range"
             min={6}
